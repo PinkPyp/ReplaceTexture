@@ -1,0 +1,328 @@
+body {
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#cursor {
+    position: absolute;
+    z-index: 999999;
+    display: none;
+}
+
+
+.hiddenz {
+  animation: fadeOut ease 1s;
+  -webkit-animation: fadeOut ease 1s;
+  opacity:0
+}
+
+.visiblez {
+  display: block;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  opacity:1
+}
+
+form {
+    margin: 0;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    display: block;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #286090;
+    border: 0;
+    width: 5%;
+}
+
+#header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(70, 70, 71, 1.0);
+    position: relative;
+    text-align: center;
+}
+
+#mainpage {
+    position: absolute;
+    display: none;
+    width: 30%;
+    height: 97%;
+    right: 0.5%;
+    padding: 10px;
+    background-color: rgba(50, 50, 51, 1.0);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.subpage {
+    position: absolute;
+    display: none;
+    width: 30%;
+    height: 97%;
+    right: 0.5%;
+    padding: 10px;
+    background-color: rgba(50, 50, 51, 1.0);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.optionpage0 {
+    position: absolute;
+    display: none;
+    width: 30%;
+    height: 97%;
+    right: 0.5%;
+    padding: 10px;
+    background-color: rgba(50, 50, 51, 1.0);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.optionpage1 {
+    position: absolute;
+    display: none;
+    width: 30%;
+    height: 97%;
+    right: 0.5%;
+    padding: 10px;
+    background-color: rgba(50, 50, 51, 1.0);
+    overflow: hidden;
+    z-index: 0;
+}
+
+#backbutton {
+    position: absolute;
+    right: 100%;
+    bottom: 0%;
+    width: 30%;
+    height: 100%;
+}
+
+    #backbutton:hover {
+        /*filter: url(filters.svg#blurMe);
+        /* Firefox 3.5+ */
+        /* IE6-9 */
+        filter: drop-shadow(0px 0px 7px #3283CA);
+        /* Google Chrome & Safari 6+ */
+    }
+
+#skeet {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    height: 20%;
+    transition: all 0s ease-in-out;
+    transition-property: height;
+    margin-left: 6%;
+    margin-top: 6%;
+}
+
+    #skeet:hover {
+        filter: drop-shadow(0px 0px 7px #3283CA);
+    }
+
+img {
+    
+}
+
+    img:hover {
+        
+    }
+
+#rows {
+    position: absolute;
+    width: 97%;
+    height: 100%;
+    overflow: auto;
+
+}
+
+.buttontext {
+    position: absolute;
+    bottom: 0%;
+    left: 56%;
+    transform: translate(-50%, -100%);
+    font-size: 20px;
+    font-family: "Bankgothic Bold", Bankgothic;
+    font-weight: bold;
+    text-shadow:5px 5px 2px #000000;
+    color: white;
+}
+
+.lockedtext {
+    position: absolute;
+    display: block;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "Bankgothic Bold", Bankgothic;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px #000000;
+    color: darkred;
+}
+
+.optionrow {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 7%;
+    border-bottom: 1px ridge #3283CA;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px #3283CA;
+    transition: all .2s ease-in-out;
+    transition-property: height;
+    overflow: hidden;
+}
+
+.optionrow:hover {
+    height: 28%
+}
+
+.row {
+    position: relative;
+    text-align: center;
+    width: 40%;
+    height: 20%;
+}
+
+.bottom {
+  position: relative;
+  display: block;
+  top: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: #fff;
+    font-size: 50px;
+    font-family: "Bankgothic Bold", Bankgothic;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.rank {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  left: 2%;
+  line-height: 47px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+
+.name {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    line-height: 45px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.score {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    color: #fff;
+    font-size: 20px;
+}
+
+#button1 {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    display: block;
+    background-color: #3283CA;
+    padding: 10px;
+}
+
+.closebutton {
+    position: relative;
+    display: block;
+    width: 2%;
+    background-color: #c41f3b;
+}
+
+.PageCount {
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  left: 27%;
+  top: 10%;
+  font-size: 20px;
+  line-height: 45px;
+  color: #fff;
+}
+
+.button2 {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    background-color: #3283CA;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+} -
+
+
+@keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-moz-keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-o-keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-ms-keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;}
+}

@@ -1,0 +1,61 @@
+<html>
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id="mainpage">
+        <div id="header">
+            <div class="title"><img id="backbutton" src="img/back.png" onclick="MainCloseButtonClicked()" />Texture Replaces</div>
+
+        </div>
+        <form action="/action_page.php">
+            <br><br>
+            <label for="TextureDict" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">Texture Dictionary:</label>
+            <input type="text" id="TextureDict" name="TextureDict" placeholder="Place old texture dictionary here"><br><br>
+            <br><br>
+            <label for="TextureName" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">Texture Name:</label>
+            <input type="text" id="TextureName" name="TextureName" placeholder="Place old texture dictionary here"><br><br>
+            <br><br>
+            <input type="checkbox" id="IsRuntime" name="IsRuntime" value="Runtime">
+            <label for="IsRuntime" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;"> Is this a runtime?</label><br>
+            <br><br>
+            <label for="NewTextureDict" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">New Texture Dictionary:</label>
+            <input type="text" id="NewTextureDict" name="NewTextureDict" placeholder="Nothing needs to be placed here if texture is a runtime."><br><br>
+            <br><br>
+            <label for="NewTextureName" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">New Texture Name:</label>
+            <input type="text" id="NewTextureName" name="NewTextureName" placeholder="Place new texture name/Image URL here"><br><br>
+            <br><br>
+            <label for="Width" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">Texture Width:</label>
+            <input type="text" id="Width" name="Width" placeholder="Place texture width here (Only needed if runtime)"><br><br>
+            <label for="Height" style="font-size: 30px; font-family: Bankgothic Bold, Bankgothic; text-shadow:5px 5px 2px #000000; color: white;">Texture Height:</label>
+            <input type="text" id="Height" name="Height" placeholder="Place texture height here (Only needed if runtime)"><br><br>
+            <br><br>
+            <input type="button" value="Replace" onclick="MainButtonClicked()">
+            <input type="button" value="Remove" onclick="MainButtonClicked2()">
+            <br><br>
+            <input type="button" value="Save Current Input" onclick="SaveCurrentInput()">
+            <input type="button" value="Save All Textures" onclick="SaveAllCurrentTextures()">
+            <input type="button" value="Load All Textures" onclick="LoadAllSavedTextures()">
+            <input type="button" value="Clear All Textures" onclick="ClearAllSavedTextures()">
+        </form>
+        <!----<div id="rows">
+            <span class="row"><img id="skeet" src="https://cdn.theatlantic.com/thumbor/1WSqRlJQkaPoDXxQ1iW9YwPL50s=/0x117:1024x650/960x500/media/img/mt/2014/10/3482996630_8e318dbf03_b/original.jpg" onclick="MainButtonClicked(0)"><span class="buttontext">Blood</span></span>
+            <span class="row"><img id="skeet" src="https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg" onclick="MainButtonClicked(1)"><span class="buttontext">Wood</span></span>
+            <span class="row"><img id="skeet" src="img/equipment.jpg"><span class="buttontext">Equipment</span></span>
+            <span class="row"><img id="skeet" src="img/support.jpg"><span class="buttontext">Support</span></span>
+            <span class="row"></span>
+        </div>-->
+    </div>
+    <script src="nuifunctions.js" type="text/javascript"></script>
+</body>
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="grayscale">
+        <feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />
+    </filter>
+    <filter id="blurMe">
+        <feGaussianBlur stdDeviation="5" />
+    </filter>
+</svg>
+</html>
